@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2023 웹디자인 기능사 실기</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/leetaewook/gmarket-sans-dynamic-subset/GmarketSans.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Gmarket Sans';
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      #nav {
+        padding: 20px;
+      }
+
+      #nav ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      #nav li a {
+        border: 1px solid #ccc;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        margin-bottom: 2px;
+        margin-right: 2px;
+        color: #666;
+        line-height: 50px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      #nav li:first-child {
+        font-size: 14px;
+        width: 70px;
+        padding-top: 16px;
+      }
+
+      #nav .site li a {
+        width: 50px;
+      }
+
+      #nav li:hover a,
+      #nav li.active a {
+        border-color: #000;
+        background-color: #000;
+        color: #fff;
+      }
+
+      #main {
+        margin: 20px;
+        border: 1px solid #ccc;
+        width: calc(100% - 40px);
+      }
+
+      iframe {
+        width: 100%;
+        height: 100vh;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <nav id="nav">
+        <ul>
+          <li>레이아웃</li>
+          <li class="active"><a href="coding/layoutA-1.html">A-1</a></li>
+          <li><a href="coding/layoutA-2.html">A-2</a></li>
+          <li><a href="coding/layoutA-3.html">A-3</a></li>
+          <li><a href="coding/layoutA-4.html">A-4</a></li>
+          <li><a href="coding/layoutB-1.html">B-1</a></li>
+          <li><a href="coding/layoutB-2.html">B-2</a></li>
+          <li><a href="coding/layoutB-3.html">B-3</a></li>
+          <li><a href="coding/layoutB-4.html">B-4</a></li>
+          <li><a href="coding/layoutC-1.html">C-1</a></li>
+          <li><a href="coding/layoutC-2.html">C-2</a></li>
+          <li><a href="coding/layoutC-3.html">C-3</a></li>
+          <li><a href="coding/layoutC-4.html">C-4</a></li>
+          <li><a href="coding/layoutD-1.html">D-1</a></li>
+          <li><a href="coding/layoutD-2.html">D-2</a></li>
+          <li><a href="coding/layoutD-3.html">D-3</a></li>
+          <li><a href="coding/layoutD-4.html">D-4</a></li>
+          <li><a href="coding/layoutE-1.html">E-1</a></li>
+          <li><a href="coding/layoutE-2.html">E-2</a></li>
+          <li><a href="coding/layoutE-3.html">E-3</a></li>
+          <li><a href="coding/layoutE-4.html">E-4</a></li>
+          <li><a href="coding/layoutF-1.html">F-1</a></li>
+          <li><a href="coding/layoutF-2.html">F-2</a></li>
+          <li><a href="coding/layoutF-3.html">F-3</a></li>
+          <li><a href="coding/layoutF-4.html">F-4</a></li>
+        </ul>
+        <ul>
+          <li>스크립트</li>
+          <li><a href="coding/menu1.html">M-1</a></li>
+          <li><a href="coding/menu2.html">M-2</a></li>
+          <li><a href="coding/menu3.html">M-3</a></li>
+          <li><a href="coding/menu4.html">M-4</a></li>
+          <li><a href="coding/menu5.html">M-5</a></li>
+          <li><a href="coding/menu6.html">M-6</a></li>
+          <li><a href="coding/slider1.html">S-1</a></li>
+          <li><a href="coding/slider2.html">S-2</a></li>
+          <li><a href="coding/slider3.html">S-3</a></li>
+          <li><a href="coding/slider4.html">S-4</a></li>
+          <li><a href="coding/slider5.html">S-5</a></li>
+          <li><a href="coding/slider6.html">S-6</a></li>
+          <li><a href="coding/tab.html">T-1</a></li>
+          <li><a href="coding/popup.html">P-1</a></li>
+        </ul>
+        <ul class="site">
+          <li>사이트</li>
+          <li><a href="site/siteA/index.html">A-1</a></li>
+          <li><a href="site/siteB/index.html">A-2</a></li>
+          <li><a href="site/siteC/index.html">A-3</a></li>
+          <li><a href="site/siteD/index.html">A-4</a></li>
+          <li><a href="site/siteA/index.html">B-1</a></li>
+          <li><a href="site/siteB/index.html">B-2</a></li>
+          <li><a href="site/siteC/index.html">B-3</a></li>
+          <li><a href="site/siteD/index.html">B-4</a></li>
+          <li><a href="site/siteA/index.html">C-1</a></li>
+          <li><a href="site/siteB/index.html">C-2</a></li>
+          <li><a href="site/siteC/index.html">C-3</a></li>
+          <li><a href="site/siteD/index.html">C-4</a></li>
+          <li><a href="site/siteA/index.html">D-1</a></li>
+          <li><a href="site/siteB/index.html">D-2</a></li>
+          <li><a href="site/siteC/index.html">D-3</a></li>
+          <li><a href="site/siteD/index.html">D-4</a></li>
+          <li><a href="site/siteA/index.html">E-1</a></li>
+          <li><a href="site/siteB/index.html">E-2</a></li>
+          <li><a href="site/siteC/index.html">E-3</a></li>
+          <li><a href="site/siteD/index.html">E-4</a></li>
+          <li><a href="site/siteA/index.html">F-1</a></li>
+          <li><a href="site/siteB/index.html">F-2</a></li>
+          <li><a href="site/siteC/index.html">F-3</a></li>
+          <li><a href="site/siteD/index.html">F-4</a></li>
+        </ul>
+      </nav>
+      <main id="main">
+        <iframe src="coding/layoutA-1.html" frameborder="0"></iframe>
+      </main>
+    </div>
+
+    <script>
+      document.querySelectorAll('#nav ul li').forEach((li) => {
+        li.addEventListener('click', (e) => {
+          e.preventDefault()
+          let href = li.querySelector('a').getAttribute('href')
+          document.querySelector('#main iframe').setAttribute('src', href)
+
+          document.querySelectorAll('#nav ul li').forEach((el) => {
+            el.classList.remove('active')
+          })
+
+          li.classList.add('active')
+        })
+      })
+    </script>
+  </body>
+</html>

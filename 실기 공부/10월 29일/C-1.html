@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃 유형 C-1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 1000px;
+        display: flex;
+      }
+      #aside {
+        width: 20%;
+      }
+      #aside .aside_logo {
+        height: 10%;
+        background-color: #bcbcbc;
+      }
+      #aside .aside_menu {
+        height: 90%;
+        background-color: #9d9d9d;
+      }
+
+      #right {
+        width: 80%;
+      }
+      #right .slide {
+        height: 350px;
+        background-color: #d9d9d9;
+      }
+
+      #right .contents {
+        display: flex;
+      }
+      #right .contents1 {
+        width: 33.333%;
+        height: 200px;
+        background-color: #d1d1d1;
+      }
+      #right .contents2 {
+        width: 33.333%;
+        height: 200px;
+        background-color: #c2c2c2;
+      }
+      #right .contents3 {
+        width: 33.333%;
+        height: 200px;
+        background-color: #b1b1b1;
+      }
+
+      #right .footer {
+        display: flex;
+      }
+      #right .footer .footer_logo {
+        width: 20%;
+        height: 100px;
+        background-color: #a3a3a3;
+      }
+      #right .footer .footer_contents {
+        width: 80%;
+        height: 100px;
+      }
+      #right .footer .footer_contents .footer_menu {
+        height: 50%;
+        background-color: #8e8d8d;
+      }
+      #right .footer .footer_contents .copyright {
+        height: 50%;
+        background-color: #535353;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="aside">
+        <div class="aside_logo"></div>
+        <div class="aside_menu"></div>
+      </div>
+      <div id="right">
+        <div class="slide"></div>
+        <div class="contents">
+          <div class="contents1"></div>
+          <div class="contents2"></div>
+          <div class="contents3"></div>
+        </div>
+        <div class="footer">
+          <div class="footer_logo"></div>
+          <div class="footer_contents">
+            <div class="footer_menu"></div>
+            <div class="copyright"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
