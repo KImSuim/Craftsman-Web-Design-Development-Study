@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+#wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+#header {
+  width: 100%;
+  display: flex;
+}
+#header .logo {
+  width: 20%;
+  height: 100px;
+  background-color: #efefef;
+}
+#header .nav {
+  width: 80%;
+  background-color: #e3e3e3;
+}
+
+/* nav */
+#header {
+  width: 100%;
+  display: flex;
+  position: relative; /* 자식들이 기준 잡도록 */
+  /* overflow: hidden 금지! (메뉴 잘림) */
+}
+/* [배경] 가상요소로 만든 회색 배경 */
+#header::after {
+  content: "";
+  width: 100%;
+  height: 0px; /* 평소엔 숨김 */
+  background-color: #808080; /* 배경색 */
+  position: absolute;
+  left: 0;
+  top: 100px; /* 헤더 높이만큼 띄움 */
+
+  z-index: 50; /* [중요] 슬라이드(보통 10)보다 높고, 메뉴(100)보다 낮게 */
+  transition: height 0.4s;
+}
+/* JS에서 .on 클래스를 붙이면 배경이 내려옴 */
+#header.on::after {
+  height: 180px; /* [팁] 글자가 튀어나가지 않게 넉넉하게 잡으세요 */
+}
+
+/* [메뉴] */
+.nav {
+  width: 80%;
+  background-color: #e3e3e3;
+  z-index: 100; /* [중요] 배경보다 더 위에 있어야 글자가 클릭됨 */
+  position: relative; /* z-index 먹히려면 포지션 필수 */
+}
+.nav > ul {
+  display: flex;
+  justify-content: right;
+  margin-top: 61px;
+}
+.nav > ul > li {
+  position: relative;
+}
+.nav > ul > li > a {
+  display: inline-block;
+  padding: 10px 50px;
+  background-color: #b0b0b0;
+}
+.nav > ul > li > a:hover {
+  background-color: #696969;
+}
+.nav > ul > li > ul {
+  position: absolute;
+  left: 0;
+  top: 40px; /* 메뉴바 높이 조정 */
+  width: 100%;
+  text-align: center;
+  background-color: transparent; /* 배경은 ::after가 담당하니 투명하게 */
+
+  /* [수정] max-height 트릭 */
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s;
+}
+.nav > ul > li > ul > li > a {
+  display: inline-block;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.nav > ul > li > ul > li > a:hover {
+  background-color: #8f8f8f;
+}
+
+#slider {
+  width: 100%;
+  height: 300px;
+  background-color: #d9d9d9;
+}
+#contents {
+  width: 100%;
+  display: flex;
+}
+#contents .content1 {
+  width: 33.3333%;
+  height: 200px;
+  background-color: #d1d1d1;
+}
+#contents .content2 {
+  width: 33.3333%;
+  height: 200px;
+  background-color: #c7c7c7;
+}
+#contents .content3 {
+  width: 33.3333%;
+  height: 200px;
+  background-color: #bcbcbc;
+}
+#footer {
+  width: 100%;
+  display: flex;
+}
+#footer .footer1 {
+  width: 20%;
+  height: 100px;
+  background-color: #b1b1b1;
+}
+#footer .footer2 {
+  width: 60%;
+  height: 100px;
+  background-color: #a3a3a3;
+}
+#footer .footer3 {
+  width: 20%;
+  height: 100px;
+  background-color: #9d9d9d;
+}
