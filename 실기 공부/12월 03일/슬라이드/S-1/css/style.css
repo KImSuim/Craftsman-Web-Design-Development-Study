@@ -79,9 +79,9 @@
   left: 0;
   top: 0;
 }
-.sliderWrap .slider img {
+/* .sliderWrap .slider img {
   vertical-align: top;
-}
+} */
 .sliderWrap .slider span {
   position: absolute;
   left: 50%;

@@ -83,30 +83,24 @@
   position: relative;
   height: 100%;
 }
-/* .sliderWrap > div {
-            display: none;
-        }
-        .sliderWrap > div:first-child {
-            display: block;
-        } */
 .sliderWrap .slider {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-position: center;
-  background-size: cover;
+  background-size: cover; /* 이미지를 영역에 꽉 차게 맞춤 */
 }
 .sliderWrap .slider.s1 {
-  background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider04.jpg);
+  background-image: url(../img/slider04.jpg);
 }
 .sliderWrap .slider.s2 {
-  background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider05.jpg);
+  background-image: url(../img/slider05.jpg);
 }
 .sliderWrap .slider.s3 {
-  background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider06.jpg);
+  background-image: url(../img/slider06.jpg);
 }
 .sliderWrap .slider span {
   position: absolute;
